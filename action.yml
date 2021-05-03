@@ -1,0 +1,22 @@
+# action.yml
+name: 'Jacoco merging action'
+author: "Charles Prud'homme"
+branding:
+    icon: filter
+    color: blue
+description: 'Action for merging a set of execution data files int a single file'
+inputs:
+  file-set:  
+    description: 'Set of execution data files to merge'
+    required: true
+    default: 'target/jacoco.exec'
+outputs:
+  dest-file: 
+    description: 'Path to the output file for execution data'
+    default: 'target/jacoco.exec'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file-set }}
+    - ${{ outputs.dest-file }}
