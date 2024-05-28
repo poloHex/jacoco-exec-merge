@@ -19,11 +19,11 @@ file to write merged execution data to. Default `"target/jacoco.exec"`.
 ## Example usage
 
 ```yaml
-uses: actions/jacoco-merge@v1
+uses: poloHex/jacoco-exec-merge@v1
 with:
   exec-file: > 
-    mod1/target/jacoco.exec
-    mod2/target/jacoco.exec
+    target/mod1/jacoco.exec
+    target/mod2/jacoco.exec
   dest-file:
     target/jacoco.exec
 ```

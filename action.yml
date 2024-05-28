@@ -1,6 +1,6 @@
 # action.yml
-name: 'Jacoco merging action'
-author: "Charles Prud'homme"
+name: 'Jacoco exec merging action'
+author: "poloHex"
 branding:
     icon: filter
     color: blue
@@ -13,7 +13,6 @@ inputs:
 outputs:
   dest-file: 
     description: 'Path to the output file for execution data'
-    default: 'target/jacoco.exec'
 runs:
   using: 'docker'
   image: 'Dockerfile'
